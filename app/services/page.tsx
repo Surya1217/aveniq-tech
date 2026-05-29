@@ -12,10 +12,7 @@ import BackgroundEffects from "@/components/effects/BackgroundEffects";
 import FloatingParticles from "@/components/effects/FloatingParticles";
 import ParallaxBackground from "@/components/effects/ParallaxBackground";
 
-/* =========================
-   LAZY LOADED SECTIONS
-========================= */
-
+/* LAZY LOADED */
 const BentoGrid = dynamic(
   () => import("@/components/sections/BentoGrid"),
 );
@@ -43,39 +40,28 @@ const AIAutomation = dynamic(
 
 export default function HomePage() {
   return (
-    <>
-      {/* GLOBAL EFFECTS */}
+    <main className="relative overflow-hidden">
+      {/* EFFECTS */}
       <BackgroundEffects />
       <ParallaxBackground />
       <FloatingParticles />
 
-      {/* CORE HERO */}
+      {/* CORE */}
       <Hero />
-
-      {/* CORE SERVICES */}
       <Services />
-
-      {/* METRICS */}
       <Stats />
 
-      {/* PREMIUM SECTIONS */}
+      {/* PREMIUM */}
       <BentoGrid />
-
       <DeploymentPipeline />
-
       <GlobalNetwork />
-
       <AIAutomation />
 
       {/* CONTENT */}
       <TechStack />
-
       <Testimonials />
-
       <FAQ />
-
-      {/* CTA */}
       <CTA />
-    </>
+    </main>
   );
 }
