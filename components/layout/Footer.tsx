@@ -1,22 +1,10 @@
 import Link from "next/link";
 
 const companyLinks = [
-  {
-    label: "About",
-    href: "/about",
-  },
-  {
-    label: "Services",
-    href: "/services",
-  },
-  {
-    label: "Careers",
-    href: "/careers",
-  },
-  {
-    label: "Contact",
-    href: "/contact",
-  },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const serviceLinks = [
@@ -56,15 +44,12 @@ const resourceLinks = [
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-[#050816]">
-      {/* Background Glow */}
       <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[180px]" />
 
       <div className="container-custom relative z-10 py-24">
-        {/* Top Grid */}
         <div className="grid gap-16 lg:grid-cols-4">
-          {/* Brand */}
           <div>
-            <h2 className="text-4xl font-bold tracking-[-0.04em]">
+            <div className="text-4xl font-bold tracking-[-0.04em]">
               <span className="text-white">
                 Aveniq
               </span>
@@ -72,27 +57,26 @@ export default function Footer() {
               <span className="text-cyan-400">
                 Tech
               </span>
-            </h2>
+            </div>
 
-            <p className="mt-8 max-w-sm text-lg leading-8 text-slate-400">
+            <p className="mt-8 max-w-sm text-lg leading-8 text-slate-300">
               Enterprise infrastructure engineering,
               AI automation systems, and scalable
               cloud-native operational platforms.
             </p>
           </div>
 
-          {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold text-white">
+            <h2 className="text-lg font-semibold text-white">
               Company
-            </h3>
+            </h2>
 
             <div className="mt-8 flex flex-col gap-5">
               {companyLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-slate-400 transition hover:text-white"
+                  className="text-slate-300 transition hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -100,18 +84,17 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white">
+            <h2 className="text-lg font-semibold text-white">
               Services
-            </h3>
+            </h2>
 
             <div className="mt-8 flex flex-col gap-5">
               {serviceLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-slate-400 transition hover:text-white"
+                  className="text-slate-300 transition hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -119,18 +102,17 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Resources */}
           <div>
-            <h3 className="text-lg font-semibold text-white">
+            <h2 className="text-lg font-semibold text-white">
               Resources
-            </h3>
+            </h2>
 
             <div className="mt-8 flex flex-col gap-5">
               {resourceLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-slate-400 transition hover:text-white"
+                  className="text-slate-300 transition hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -139,8 +121,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-20 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 text-sm text-slate-500 md:flex-row">
+        <div className="mt-20 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 text-sm text-slate-400 md:flex-row">
           <p>
             © 2026 AveniqTech. All rights reserved.
           </p>

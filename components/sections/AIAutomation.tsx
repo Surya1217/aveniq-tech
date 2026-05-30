@@ -38,11 +38,12 @@ const systems = [
 export default function AIAutomation() {
   return (
     <section className="section-padding relative overflow-hidden">
-      {/* Massive Glow */}
-      <div className="absolute left-1/2 top-1/2 h-[900px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[220px]" />
+      <div
+        aria-hidden="true"
+        className="absolute left-1/2 top-1/2 h-[900px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[220px]"
+      />
 
       <div className="container-custom relative z-10">
-        {/* Heading */}
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-4 text-cyan-400">
             Intelligent Automation Systems
@@ -53,16 +54,14 @@ export default function AIAutomation() {
             engineered for modern platforms
           </h2>
 
-          <p className="mt-8 text-lg leading-8 text-slate-400">
+          <p className="mt-8 text-lg leading-8 text-slate-300">
             Advanced orchestration, intelligent
             automation, and distributed AI systems
             designed for enterprise-scale operations.
           </p>
         </div>
 
-        {/* Main Visual */}
         <div className="relative mt-28">
-          {/* Core AI Hub */}
           <motion.div
             animate={{
               scale: [1, 1.06, 1],
@@ -74,10 +73,11 @@ export default function AIAutomation() {
             }}
             className="glass relative z-20 mx-auto flex h-[260px] w-[260px] items-center justify-center rounded-full border border-cyan-400/20"
           >
-            {/* Inner Glow */}
-            <div className="absolute inset-10 rounded-full bg-cyan-500/10 blur-3xl" />
+            <div
+              aria-hidden="true"
+              className="absolute inset-10 rounded-full bg-cyan-500/10 blur-3xl"
+            />
 
-            {/* Rotating Ring */}
             <motion.div
               animate={{
                 rotate: 360,
@@ -90,9 +90,11 @@ export default function AIAutomation() {
               className="absolute inset-[-20px] rounded-full border border-dashed border-cyan-400/20"
             />
 
-            {/* Center Content */}
             <div className="relative z-10 text-center">
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-cyan-500/10 text-cyan-400">
+              <div
+                aria-hidden="true"
+                className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-cyan-500/10 text-cyan-400"
+              >
                 <BrainCircuit size={42} />
               </div>
 
@@ -106,12 +108,16 @@ export default function AIAutomation() {
             </div>
           </motion.div>
 
-          {/* Orbital Rings */}
-          <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/10" />
+          <div
+            aria-hidden="true"
+            className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/10"
+          />
 
-          <div className="absolute left-1/2 top-1/2 h-[750px] w-[750px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/5" />
+          <div
+            aria-hidden="true"
+            className="absolute left-1/2 top-1/2 h-[750px] w-[750px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/5"
+          />
 
-          {/* System Cards */}
           <div className="relative mt-32 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
             {systems.map((system, index) => {
               const Icon = system.icon;
@@ -138,36 +144,35 @@ export default function AIAutomation() {
                   viewport={{ once: true }}
                   className="glass group relative overflow-hidden rounded-[32px] border border-white/10 p-8"
                 >
-                  {/* Hover Glow */}
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-cyan-500/0 to-blue-500/0 opacity-0 transition duration-500 group-hover:opacity-100 group-hover:from-cyan-500/5 group-hover:to-blue-500/10" />
 
-                  {/* Icon */}
-                  <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-400">
+                  <div
+                    aria-hidden="true"
+                    className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-400"
+                  >
                     <Icon size={30} />
                   </div>
 
-                  {/* Content */}
                   <div className="relative z-10 mt-8">
                     <h3 className="text-2xl font-bold">
                       {system.title}
                     </h3>
 
-                    <p className="mt-4 leading-7 text-slate-400">
+                    <p className="mt-4 leading-7 text-slate-300">
                       {system.description}
                     </p>
                   </div>
 
-                  {/* Bottom Border */}
                   <div className="absolute bottom-0 left-0 h-[2px] w-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-60" />
                 </motion.div>
               );
             })}
           </div>
 
-          {/* Floating Particles */}
           {[...Array(12)].map((_, index) => (
             <motion.div
               key={index}
+              aria-hidden="true"
               animate={{
                 y: [0, -20, 0],
                 opacity: [0.2, 0.8, 0.2],
