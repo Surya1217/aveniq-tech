@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 import "./globals.css";
 
@@ -51,13 +52,19 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#050816] text-white antialiased`}
       >
-        <Navbar />
+        <header>
+          <Navbar />
+        </header>
 
         <main className="relative overflow-hidden pt-20">
           {children}
         </main>
 
-        <Footer />
+        <footer>
+          <Footer />
+        </footer>
+
+        <Analytics />
       </body>
     </html>
   );
